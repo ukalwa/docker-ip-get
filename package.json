@@ -1,0 +1,46 @@
+{
+  "name": "node-ts-starter-template",
+  "version": "1.0.0",
+  "description": "A NodeJS + TypeScript starter template for creating npm packages",
+  "main": "dist/index.js",
+  "repository": "https://github.com/ukalwa/node-ts-starter-template.git",
+  "author": "Upender Kalwa",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "start": "node --inspect=5858 -r ts-node/register ./src/index.ts",
+    "start:w": "nodemon",
+    "clean": "rimraf dist coverage",
+    "lint": "eslint . --ext .ts --fix",
+    "prebuild": "yarn lint",
+    "build": "yarn clean && tsc -p tsconfig.build.json",
+    "report": "yarn test:coverage && codecov"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,md,html,css}": "prettier --write",
+    "*.{js,jsx,ts,tsx}": "eslint --fix"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.9",
+    "@types/node": "^14.0.27",
+    "@typescript-eslint/eslint-plugin": "^3.8.0",
+    "@typescript-eslint/parser": "^3.8.0",
+    "codecov": "^3.7.2",
+    "eslint": "^7.6.0",
+    "husky": "^4.2.5",
+    "jest": "^26.2.2",
+    "lint-staged": "^10.2.11",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.1.4",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  }
+}
