@@ -1,19 +1,7 @@
-/**
- * Add two numbers
- *
- * @export
- * @returns sum of two numbers
- */
-export function add(a: number, b: number): number {
-  return a + b;
-}
+import { readFileSync } from "fs";
 
-/**
- * Subtract two numbers
- *
- * @export
- * @returns difference of two numbers
- */
-export function subtract(a: number, b: number): number {
-  return a - b;
+// https://stackoverflow.com/a/37015387
+export function isInDocker(): boolean {
+  const file = readFileSync("/proc/self/cgroup", "utf-8");
+  return file.indexOf("/docker") !== -1;
 }
