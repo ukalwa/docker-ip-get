@@ -1,9 +1,9 @@
 {
-  "name": "node-ts-starter-template",
+  "name": "docker-ip-get",
   "version": "1.0.0",
-  "description": "A NodeJS + TypeScript starter template for creating npm packages",
+  "description": "Utilities to get ip addresses of docker containers and host",
   "main": "dist/index.js",
-  "repository": "https://github.com/ukalwa/node-ts-starter-template.git",
+  "repository": "https://github.com/ukalwa/docker-ip-get.git",
   "author": "Upender Kalwa",
   "license": "MIT",
   "scripts": {
