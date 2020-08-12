@@ -1,6 +1,6 @@
 {
   "name": "docker-ip-get",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Utilities to get ip addresses of docker containers and host",
   "main": "dist/index.js",
   "repository": "https://github.com/ukalwa/docker-ip-get.git",
@@ -15,7 +15,8 @@
     "lint": "eslint . --ext .ts --fix",
     "prebuild": "yarn lint",
     "build": "yarn clean && tsc -p tsconfig.build.json",
-    "report": "yarn test:coverage && codecov"
+    "report": "yarn test:coverage && codecov",
+    "prepack": "yarn build"
   },
   "husky": {
     "hooks": {
@@ -42,5 +43,8 @@
     "ts-jest": "^26.1.4",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
