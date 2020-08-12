@@ -1,5 +1,6 @@
 import fs from "fs";
-import * as dockerIpTools from "../src";
+import * as dockerIpTools from "../src/lib";
+import os from "os";
 
 describe("isInDocker", () => {
   const mock = jest.spyOn(fs, "readFileSync");
@@ -22,6 +23,16 @@ describe("isInDocker", () => {
     mock.mockReturnValueOnce("2:cpu:/\n" + "1:cpuset:/\n");
     expect(dockerIpTools.isInDocker()).toBe(false);
     expect(mock).toBeCalledTimes(1);
+  });
+
+  test("returns false if the platform is not linux", () => {
+    const platformMock = jest
+      .spyOn(os, "platform")
+      .mockReturnValueOnce("darwin")
+      .mockReturnValueOnce("win32");
+    expect(dockerIpTools.isInDocker()).toBe(false);
+    expect(dockerIpTools.isInDocker()).toBe(false);
+    platformMock.mockRestore();
   });
 });
 
