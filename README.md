@@ -1,5 +1,11 @@
 # Overview
 
+[![Build Status](https://travis-ci.com/ukalwa/docker-ip-get.svg?branch=master)](https://travis-ci.com/ukalwa/docker-ip-get)
+![npm](https://img.shields.io/npm/v/docker-ip-get)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/docker-ip-get)
+![npm](https://img.shields.io/npm/dm/docker-ip-get)
+[![codecov](https://codecov.io/gh/ukalwa/docker-ip-get/branch/master/graph/badge.svg)](https://codecov.io/gh/ukalwa/docker-ip-get)
+
 This package consists of a couple of utilities to get IP addresses of containers and host from inside a docker container.
 
 ## Getting Started
