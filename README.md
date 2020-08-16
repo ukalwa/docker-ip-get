@@ -10,13 +10,15 @@ This package consists of a couple of utilities to get IP addresses of containers
 
 ## Getting Started
 
-Install this package using [yarn]:
+Install this package
+
+using [yarn](https://classic.yarnpkg.com/en/):
 
 ```
 yarn add docker-ip-get
 ```
 
-or [npm]:
+or using [npm](https://www.npmjs.com/):
 
 ```
 npm install docker-ip-get
@@ -24,13 +26,15 @@ npm install docker-ip-get
 
 Here is an example usage:
 
-First, import the library in CommonJS format:
+First, import the library
+
+in CommonJS format:
 
 ```js
 const dockerIpTools = require("docker-ip-get");
 ```
 
-or in ES6 or TypeScript format:
+or in ES6 format:
 
 ```ts
 import * as dockerIpTools from "docker-ip-get";
